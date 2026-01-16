@@ -1,0 +1,153 @@
+Introduction Et Problématique – Smart-decision Lab
+
+1️⃣ Introduction & problématique ✅
+2️⃣ Objectifs (général + spécifiques) ✅
+3️⃣ Jeu de données (défini et justifié scientifiquement) ✅
+4️⃣ Architecture technique claire et défendable ✅
+5️⃣ Méthodologie académique complète ✅
+6️⃣ Implémentation & premiers résultats ✅
+7️⃣ Discussion ✅
+8️⃣ Conclusion & perspectives ✅
+
+
+
+
+Introduction générale
+
+L’évolution rapide des technologies numériques et la disponibilité croissante des données ont profondément transformé les méthodes d’analyse et de prise de décision dans de nombreux domaines, notamment dans le secteur de l’éducation. Les établissements académiques produisent et stockent aujourd’hui une grande quantité de données relatives aux performances des étudiants : notes, résultats de projets, assiduité, progression dans le temps, etc. Cependant, ces données sont souvent sous-exploitées et se limitent à des analyses descriptives simples, insuffisantes pour soutenir une prise de décision efficace.
+
+Dans un contexte académique marqué par la diversité des profils d’étudiants et la complexité croissante des parcours de formation, il devient nécessaire de disposer d’outils capables non seulement d’analyser les performances passées, mais aussi de prévoir des évolutions futures et d’évaluer l’impact de différentes décisions possibles. L’intégration des techniques de l’analyse de données et de l’intelligence artificielle locale offre ainsi une opportunité majeure pour améliorer la compréhension des performances académiques et accompagner les acteurs du système éducatif dans leurs choix.
+
+C’est dans cette perspective que s’inscrit le projet Smart-Decision Lab, une plateforme académique d’analyse, de simulation et d’aide à la décision. Ce projet vise à concevoir un système structuré permettant d’observer les performances académiques, de détecter des situations à risque, de simuler des scénarios prospectifs et de fournir des éléments d’aide à la décision, tout en garantissant une interprétabilité claire des résultats obtenus.
+
+Problématique
+
+Malgré la disponibilité de nombreuses données académiques, les décisions pédagogiques et organisationnelles reposent encore largement sur des analyses manuelles ou intuitives. Cette approche peut conduire à des retards dans la détection des difficultés, à des choix peu optimisés en matière d’orientation ou de charge de travail, et à une exploitation limitée du potentiel informatif des données existantes.
+
+La problématique centrale de ce projet peut donc être formulée comme suit :
+
+Comment exploiter efficacement les données académiques afin de mettre en place un système d’aide à la décision capable d’analyser les performances, de prédire des évolutions futures et de simuler l’impact de différents scénarios, tout en restant compréhensible et pertinent dans un cadre académique ?
+
+Objectifs du projet
+Objectif général
+
+Concevoir et implémenter une plateforme académique permettant l’analyse des performances étudiantes et l’aide à la prise de décision à partir de données structurées, en intégrant des méthodes d’analyse de données et d’intelligence artificielle locale explicable.
+
+Objectifs spécifiques
+
+Collecter et structurer des données académiques pertinentes.
+
+Réaliser une analyse descriptive et statistique des performances.
+
+Mettre en place des modèles de détection et de prédiction simples.
+
+Concevoir un système d’aide à la décision basé sur des indicateurs et des règles.
+
+Développer un module de simulation de scénarios de type What-if.
+
+Fournir une interprétation claire et explicable des résultats obtenus.
+
+Intérêt académique et scientifique
+
+Ce projet présente un intérêt académique majeur, car il combine plusieurs notions fondamentales enseignées en sciences de l’ingénieur et en intelligence artificielle : analyse de données, modélisation, apprentissage automatique, systèmes décisionnels et explicabilité des modèles. Il constitue ainsi un cadre pédagogique pertinent pour illustrer l’application concrète des concepts théoriques étudiés au cours de la formation.
+
+Par ailleurs, Smart-Decision Lab peut servir de base à des travaux futurs, notamment l’intégration de données réelles anonymisées, l’amélioration des modèles prédictifs ou l’extension du système à d’autres domaines décisionnels.
+
+
+
+
+Définition du jeu de données académique
+1. Description générale des données
+
+Le jeu de données utilisé dans le cadre du projet Smart-Decision Lab représente un ensemble structuré de données académiques simulées, inspirées de situations réelles rencontrées dans les établissements d’enseignement supérieur. L’objectif de ce choix est de garantir la cohérence scientifique du projet tout en respectant les contraintes d’anonymisation et de confidentialité.
+
+Les données concernent un groupe d’étudiants suivis sur une période académique donnée (un semestre ou une année universitaire). Elles permettent d’analyser les performances, de détecter des situations à risque et de simuler l’impact de différentes décisions académiques.
+
+2. Variables du jeu de données
+
+Le jeu de données est organisé sous forme tabulaire, chaque ligne représentant un étudiant et chaque colonne une variable académique ou comportementale.
+
+2.1 Variables d’identification
+
+ID_Etudiant : identifiant unique de l’étudiant.
+
+Filiere : filière ou programme académique suivi.
+
+Niveau : niveau d’étude (Licence 1, Licence 2, etc.).
+
+Ces variables permettent de segmenter les analyses sans révéler l’identité réelle des étudiants.
+
+2.2 Variables de performance académique
+
+Note_Moyenne : moyenne générale obtenue.
+
+Note_Matiere_Principale : note dans la matière dominante.
+
+Note_Projet : note obtenue au projet académique.
+
+Ces variables constituent les indicateurs centraux de performance.
+
+2.3 Variables comportementales
+
+Taux_Presence (%) : pourcentage de présence aux cours.
+
+Heures_Etude_Semaine : nombre moyen d’heures de travail personnel.
+
+Rendu_Temps : respect des délais (oui/non ou score).
+
+Elles permettent d’expliquer les performances observées.
+
+2.4 Variable cible (décisionnelle)
+
+Statut_Risque :
+
+0 : situation normale
+
+1 : risque académique modéré
+
+2 : risque académique élevé
+
+Cette variable est utilisée pour la détection et la prédiction.
+
+3. Justification scientifique du choix des variables
+
+Les variables sélectionnées reposent sur des facteurs reconnus dans la littérature académique comme influençant la réussite des étudiants :
+
+les performances passées (notes),
+
+l’assiduité,
+
+l’investissement personnel,
+
+le respect des échéances.
+
+Le croisement de ces variables permet de dépasser une simple analyse descriptive et d’entrer dans une démarche décisionnelle et prédictive.
+
+4. Format et structuration des données
+
+Les données sont stockées dans un format CSV ou SQLite, facilement exploitable par les outils d’analyse et d’apprentissage automatique.
+
+Exemple de structure :
+
+ID_Etudiant	Filiere	Niveau	Note_Moyenne	Taux_Presence	Heures_Etude	Statut_Risque
+
+Cette structure facilite les opérations de filtrage, de visualisation et de modélisation.
+
+5. Rôle du jeu de données dans le projet
+
+Le jeu de données constitue le socle du projet Smart-Decision Lab. Il est utilisé successivement pour :
+
+l’analyse descriptive et statistique,
+
+la détection de situations anormales,
+
+la prédiction des performances futures,
+
+la simulation de scénarios What-if,
+
+l’aide à la prise de décision.
+
+Une attention particulière est portée à la cohérence, à la complétude et à l’interprétabilité des données, afin de garantir la validité académique des résultats obtenus.
+
+Parfait 👍
+👉 C’est fait : j’ai tout intégré dans le document, comme un vrai projet académique complet.
