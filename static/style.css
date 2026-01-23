@@ -1,0 +1,111 @@
+/* =========================
+   Variables de couleurs
+========================= */
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --light: #f4f7f6;
+    --white: #ffffff;
+}
+
+/* =========================
+   Style global
+========================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light);
+    margin: 0;
+    color: var(--primary);
+}
+
+/* =========================
+   Conteneur principal
+========================= */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =========================
+   En-tête
+========================= */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header h1 span {
+    display: block;
+    font-size: 0.5em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* =========================
+   Carte du formulaire
+========================= */
+.form-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: -40px;
+}
+
+/* =========================
+   Groupes de formulaire
+========================= */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* =========================
+   Champs de saisie
+========================= */
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* =========================
+   Bouton
+========================= */
+.btn-submit {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
