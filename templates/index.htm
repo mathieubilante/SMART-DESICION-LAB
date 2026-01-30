@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDL - Aide à la Décision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>SDL <span>Smart Decision Lab</span></h1>
+            <p>Analyse prédictive des performances académiques</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h2>Saisie des données académiques</h2>
+            <p style="color: #7f8c8d; font-size: 0.9em;">Remplissez les informations pour générer une simulation de réussite.</p>
+            
+            <form action="/submit" method="POST">
+                
+                <div class="form-group">
+                    <label for="nom">Nom de l'étudiant</label>
+                    <input type="text" id="nom" name="nom" placeholder="Ex: Jean Martin" required>
+                </div>
+
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="filiere">Filière</label>
+                        <select id="filiere" name="filiere" required>
+                            <option value="IABD">IA & Big Data (IABD)</option>
+                            <option value="GE">Génie Électrique</option>
+                            <option value="GI">Génie Informatique</option>
+                            <option value="LT">Logistique</option>
+                        </select>
+                    </div>
+                    <div class="col form-group">
+                        <label for="niveau">Niveau d'étude</label>
+                        <input type="text" id="niveau" name="niveau" placeholder="Ex: Licence 3" required>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="note_moyenne">Note Moyenne (/20)</label>
+                        <input type="number" id="note_moyenne" name="note_moyenne" step="0.01" min="0" max="20" required>
+                    </div>
+                    <div class="col form-group">
+                        <label for="taux_presence">Taux de Présence (%)</label>
+                        <input type="number" id="taux_presence" name="taux_presence" min="0" max="100" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="heures_etude">Heures de travail personnel / semaine</label>
+                    <input type="number" id="heures_etude" name="heures_etude" min="0" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Calculer le Statut Décisionnel</button>
+
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
